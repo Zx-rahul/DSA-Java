@@ -1,20 +1,21 @@
 package Arrays.Sorting;
 
-import patterns.Utility;
+import Patterns.Utility;
+
+import java.util.Arrays;
 
 public class BubbleSort {
 
     int[] descendingSort(int[] arr){
-        int temp,swap;
-        for (int i = 0; i < arr.length-1; i++) {
+        int swap;
+        for (int i = arr.length-1; i>=1 ; i--) {
             swap=0;
-            for (int j = 0; j < (arr.length-1)-i; j++) {
-                //swapping in inner loop
-                if (arr[j]<arr[j+1]){//swapping
-                    temp=arr[j];
+            for (int j = 0; j <= i-1; j++) {
+                if (arr[j]<arr[j+1]){
+                    int temp=arr[j];
                     arr[j]=arr[j+1];
                     arr[j+1]=temp;
-                    swap++;
+                    swap=1;
                 }
             }
             if (swap==0){
@@ -25,16 +26,15 @@ public class BubbleSort {
     }
 
     int[] ascendingSort(int[] arr){
-        int temp,swap;
-        for (int i = 0; i < arr.length-1; i++) {
+        int swap;
+        for (int i = arr.length-1; i>=1 ; i--) {
             swap=0;
-            for (int j = 0; j < (arr.length-1)-i; j++) {
-                //swapping in inner loop
-                if (arr[j]>arr[j+1]){//swapping
-                    temp=arr[j];
+            for (int j = 0; j <= i-1; j++) {
+                if (arr[j]>arr[j+1]){
+                    int temp=arr[j];
                     arr[j]=arr[j+1];
                     arr[j+1]=temp;
-                    swap++;
+                    swap=1;
                 }
             }
             if (swap==0){

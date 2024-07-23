@@ -1,42 +1,35 @@
 package Arrays.Sorting;
 
-import patterns.Utility;
+import Collections.Collection.List.Swapping;
+import Patterns.Utility;
 
 public class SelectionSort {
 
     int[] descendingSort(int[] arr){
-        int temp,maxPos;
-        for (int i = 0; i < arr.length-1; i++) {
-            maxPos=i;
-            for (int j = i+1; j < arr.length; j++) {
-                System.out.println("j"+j);
-                if (arr[maxPos]<arr[j]){
-                    maxPos=j;
+        for (int i = 0; i <= arr.length-2 ; i++) {
+            int max=i;
+            for (int j = i+1; j <= arr.length-1 ; j++) {
+                if (arr[max]<arr[j]){
+                    max=j;
                 }
             }
-            //swapping in outer loop
-            //swapping after extracting the maximum value's position
-            temp=arr[maxPos];
-            arr[maxPos]=arr[i];
+            int temp=arr[max];
+            arr[max]=arr[i];
             arr[i]=temp;
         }
         return arr;
     }
 
     int[] ascendingSort(int[] arr){
-        int temp,minPos;
-        for (int i = 0; i < arr.length-1; i++) {
-            minPos=i;
-            for (int j = i+1; j < arr.length; j++) {
-                System.out.println("j"+j);
-                if (arr[minPos]>arr[j]){
-                    minPos=j;
+        for (int i = 0; i <= arr.length-2 ; i++) {
+            int min=i;
+            for (int j = i+1; j <= arr.length-1 ; j++) {
+                if (arr[min]>arr[j]){
+                    min=j;
                 }
             }
-            //swapping in outer loop
-            //swapping after extracting the minimum value's position
-            temp=arr[minPos];
-            arr[minPos]=arr[i];
+            int temp=arr[min];
+            arr[min]=arr[i];
             arr[i]=temp;
         }
         return arr;

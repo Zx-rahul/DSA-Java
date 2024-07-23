@@ -1,7 +1,6 @@
-package patterns;
+package Patterns;
 
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ButterflyPattern {

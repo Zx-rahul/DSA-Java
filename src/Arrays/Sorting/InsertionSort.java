@@ -1,30 +1,30 @@
 package Arrays.Sorting;
 
-import patterns.Utility;
+import Patterns.Utility;
 
 public class InsertionSort {
     int[] descendingSort(int[] arr){
-        for (int i = 1; i < arr.length; i++) {
-            int current=arr[i];
-            int prev=i-1;
-            while (prev>=0&&arr[prev]<current){
-                arr[prev+1]=arr[prev];
-                prev--;
+        for (int i = 1; i <= arr.length-1; i++) {
+            int j=i;
+            while (j>0 && arr[j-1]<arr[j]){
+                int temp=arr[j];
+                arr[j]=arr[j-1];
+                arr[j-1]=temp;
+                j--;
             }
-            arr[prev+1]=current;
         }
         return arr;
     }
 
     int[] ascendingSort(int[] arr){
-        for (int i = 1; i < arr.length; i++) {
-            int current=arr[i];
-            int prev=i-1;
-            while (prev>=0&&arr[prev]>current){
-                arr[prev+1]=arr[prev];
-                prev--;
+        for (int i = 1; i <= arr.length-1; i++) {
+            int j=i;
+            while (j>0 && arr[j-1]>arr[j]){
+                int temp=arr[j];
+                arr[j]=arr[j-1];
+                arr[j-1]=temp;
+                j--;
             }
-            arr[prev+1]=current;
         }
         return arr;
     }
