@@ -1,4 +1,4 @@
-package SearchingSortingArray;
+package Arrays.Searching;
 
 import java.util.Scanner;
 

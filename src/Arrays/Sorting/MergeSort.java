@@ -3,17 +3,16 @@ package Arrays.Sorting;
 import Arrays.Searching.Utility;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class MergeSort {
 
-    public static void sort(int[] arr,int low,int high) {
+    public static void mergeSort(int[] arr, int low, int high) {
         if (low>=high){
             return;
         }
         int mid=(high+low)/2;
-        sort(arr, low, mid);
-        sort(arr, mid+1, high);
+        mergeSort(arr, low, mid);
+        mergeSort(arr, mid+1, high);
         merge(arr,low,mid,high);
     }
 
@@ -46,7 +45,7 @@ public class MergeSort {
     public static void main(String[] args) {
         int[] arr= Utility.input1DArray();
         Utility.display1DArray(arr);
-        sort(arr,0,arr.length-1);
+        mergeSort(arr,0,arr.length-1);
         Utility.display1DArray(arr);
     }
 }

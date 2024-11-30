@@ -1,4 +1,4 @@
-package Arrays.Operations;
+package Arrays.Operations.C.Optimal;
 
 import Arrays.Searching.Utility;
 

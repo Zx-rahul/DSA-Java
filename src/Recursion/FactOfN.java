@@ -7,6 +7,7 @@ public class FactOfN {
         if(n==0){
             return 1;
         }
+        System.out.println(n+"\n");
         return n*print(n-1);
     }
 
